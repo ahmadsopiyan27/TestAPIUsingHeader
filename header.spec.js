@@ -6,5 +6,8 @@ describe('coba header', async function() {
     }
     let url = 'http://api.travelpayouts.com';
     let endpoint = '/v1/prices/monthly'
+
+    const response = await request(url).get(endpoint).set(header);
+    console.log(response);
     
 })
