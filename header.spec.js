@@ -10,8 +10,13 @@ describe('coba header', async function() {
         'departure_date': '2025-04',
         'return_date': '2025-05'
     }
+    let id = [123,124,125]
+
     let url = 'https://api.travelpayouts.com';
     let endpoint = '/v1/prices/monthly'
+
+    let newEndpoint
+
 
     const response = await request(url).get(endpoint).set(header).query(parameter);
     console.log(response.body);
